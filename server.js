@@ -64,6 +64,11 @@ app.get('/', (req, res) => {
 
 
 
+app.get('/home', (req, res) => {
+    res.render('template', {title: 'home', message: "home page", content: 'this is the home page'})
+})
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })
