@@ -8,6 +8,16 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>')
 })
 
+app.post('/', (req, res) => {
+    console.log(req.method);
+
+    res.send('<h1>Post method</h1>')
+})
+
+app.get('/home', (req, res) => {
+    console.log(req.method);
+    res.send("<h1>Home Page</h1>")
+})
 
 app.get('/posts', (req, res) => {
     console.log(req.method);
