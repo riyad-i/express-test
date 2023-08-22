@@ -59,7 +59,7 @@ app.set('view engine', 'madeline')
 
 
 app.get('/', (req, res) => {
-    res.send("Working")
+    res.render('template', {title: 'hey', message: 'first template engine', content: 'Nodejs and Express'})
 })
 
 
