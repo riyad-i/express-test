@@ -35,7 +35,7 @@ const app = express()
 const port = 3000
 
 
-//app config
+//app template engine definition
 app.engine('madeline', (filePath, options, callback)=> {
     fs.readFile(filePath, (err, content) => {
         //check if error reading file
@@ -51,6 +51,11 @@ app.engine('madeline', (filePath, options, callback)=> {
     })
 
 })
+
+//app config
+app.set('views', './views')
+app.set('view engine', 'madeline')
+
 
 
 app.get('/', (req, res) => {
